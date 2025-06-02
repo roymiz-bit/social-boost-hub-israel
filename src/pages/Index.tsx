@@ -15,6 +15,10 @@ const Index = () => {
     window.open(discordLink, '_blank');
   };
 
+  const scrollToPurchase = () => {
+    document.getElementById('purchase-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
@@ -68,21 +72,33 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">עוקבים</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">1K עוקבים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">3K עוקבים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">35₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">35₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">5K עוקבים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">50₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">50₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">10K עוקבים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">80₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">80₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -90,21 +106,33 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">לייקים</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">1K לייקים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">10₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">10₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">3K לייקים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">15₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">15₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">5K לייקים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">10K לייקים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">30₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">30₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -112,25 +140,40 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">צפיות</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">10K צפיות</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">5₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">5₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">30K צפיות</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">6₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">6₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">50K צפיות</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">7₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">7₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">80K צפיות</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">8₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">8₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">100K צפיות</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">10₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">10₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,21 +190,33 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">עוקבים</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">1K עוקבים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">3K עוקבים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">35₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">35₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">5K עוקבים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">50₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">50₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">10K עוקבים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">75₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">75₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -169,21 +224,33 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">לייקים</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">1K לייקים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">15₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">15₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">3K לייקים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">5K לייקים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">10K לייקים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">35₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">35₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -201,9 +268,12 @@ const Index = () => {
                 <h4 className="font-semibold text-gray-200 mb-2">נייטרו בוסט</h4>
                 <div className="bg-gray-800 p-3 rounded border border-gray-700">
                   <p className="text-gray-300 text-sm mb-2">8 ימי אחריות • איכות גבוהה • לצלם בזמן קבלת הנייטרו</p>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between items-center">
                     <span className="text-gray-300">נייטרו בוסט</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -212,9 +282,12 @@ const Index = () => {
                 <h4 className="font-semibold text-gray-200 mb-2">נייטרו רגיל (בייסיק)</h4>
                 <div className="bg-gray-800 p-3 rounded border border-gray-700">
                   <p className="text-gray-300 text-sm mb-2">אחריות מלאה • 0 סיכוי לקבל החזר לנייטרו</p>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between items-center">
                     <span className="text-gray-300">נייטרו בייסיק</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">צור קשר</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">צור קשר</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -222,13 +295,19 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">בוסטים לשרת</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">14 בוסטים לחודש</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">14 בוסטים ל-3 חודשים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">55₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">55₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
                 <p className="text-gray-400 text-sm">לא צריך להוסיף בוט, רק קישור לשרת</p>
@@ -246,21 +325,33 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">מחוברים</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">300 חברים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">15₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">15₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">500 חברים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">1000 חברים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">35₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">35₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">2000 חברים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">55₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">55₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -268,21 +359,33 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">לא מחוברים</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">300 חברים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">10₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">10₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">500 חברים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">15₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">15₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">1000 חברים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">25₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">2000 חברים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">40₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">40₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -306,13 +409,19 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">משולם באופן חוקי - אחריות מלאה</h4>
                 <div className="space-y-2">
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">12 חודשים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">90₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">90₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
-                  <div className="flex justify-between bg-gray-800 p-2 rounded border border-gray-700">
+                  <div className="flex justify-between items-center bg-gray-800 p-2 rounded border border-gray-700">
                     <span className="text-gray-300">6 חודשים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">50₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">50₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                 </div>
                 <p className="text-gray-400 text-sm">קונה על המשתמש שלך/משתמש חדש</p>
@@ -321,9 +430,12 @@ const Index = () => {
               <div>
                 <h4 className="font-semibold text-gray-200 mb-2">משתמש חדש - בלי אחריות</h4>
                 <div className="bg-gray-800 p-3 rounded border border-gray-700">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between items-center mb-2">
                     <span className="text-gray-300">2-3 חודשים</span>
-                    <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-gray-700 text-white">20₪</Badge>
+                      <Button size="sm" onClick={scrollToPurchase} className="bg-blue-600 hover:bg-blue-700">קנה</Button>
+                    </div>
                   </div>
                   <p className="text-gray-400 text-sm">עד 2 החלפות למשתמש (רק עם נגמר הפרימיום)</p>
                 </div>
@@ -332,25 +444,49 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Footer */}
-        <div className="mt-12 text-center bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <h3 className="text-xl font-semibold mb-4 text-white">איך לרכוש?</h3>
-          <p className="text-gray-300 mb-4">
-            לאחר בחירת השירות הרצוי, פנה אלינו באמצעים הבאים:
-          </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <Button 
-              onClick={handleWhatsApp}
-              className="bg-gray-700 hover:bg-gray-600 text-white border border-gray-600"
-            >
-              📱 WhatsApp
-            </Button>
-            <Button 
-              onClick={handleDiscord}
-              className="bg-gray-700 hover:bg-gray-600 text-white border border-gray-600"
-            >
-              💬 פתח טיקט ב-Discord
-            </Button>
+        {/* Improved Purchase Section */}
+        <div id="purchase-section" className="mt-12 bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-lg border border-gray-700 shadow-2xl">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold mb-4 text-white">🛒 איך לרכוש?</h3>
+            <p className="text-gray-300 mb-6 text-lg">
+              בחרת מוצר? בוא נסיים את התהליך בקלות!
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-gray-800 p-6 rounded-lg border border-gray-600">
+                <h4 className="text-xl font-semibold text-white mb-3">📱 WhatsApp</h4>
+                <p className="text-gray-300 mb-4">שלח הודעה עם פרטי המוצר שאתה רוצה</p>
+                <Button 
+                  onClick={handleWhatsApp}
+                  className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  size="lg"
+                >
+                  פתח WhatsApp: {whatsappNumber}
+                </Button>
+              </div>
+              
+              <div className="bg-gray-800 p-6 rounded-lg border border-gray-600">
+                <h4 className="text-xl font-semibold text-white mb-3">💬 Discord</h4>
+                <p className="text-gray-300 mb-4">פתח טיקט בשרת Discord שלנו</p>
+                <Button 
+                  onClick={handleDiscord}
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
+                  size="lg"
+                >
+                  הצטרף לשרת Discord
+                </Button>
+              </div>
+            </div>
+
+            <div className="bg-yellow-900/20 border border-yellow-700 p-4 rounded-lg">
+              <h4 className="text-yellow-300 font-semibold mb-2">⚠️ חשוב לדעת:</h4>
+              <ul className="text-yellow-200 text-sm space-y-1 text-right">
+                <li>• לאחר הרכישה, פתח טיקט בשרת Discord או שלח הודעה ב-WhatsApp</li>
+                <li>• ציין את שם המוצר והכמות שרכשת</li>
+                <li>• צרף את הקישור לפרופיל/שרת שלך</li>
+                <li>• זמן האספקה: 24-48 שעות לרוב השירותים</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
