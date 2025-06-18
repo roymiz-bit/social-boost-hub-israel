@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -453,6 +454,27 @@ const Index = () => {
               </div>
             </div>
 
+            {/* Payment Methods Section */}
+            <div className="bg-blue-900/20 border border-blue-700 p-6 rounded-lg mb-6">
+              <h4 className="text-blue-300 font-semibold mb-4 text-xl">💳 דרכי תשלום</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                  <div className="flex items-center justify-center mb-2">
+                    <span className="text-2xl mr-2">💵</span>
+                    <h5 className="text-white font-semibold">קאש קאש</h5>
+                  </div>
+                  <p className="text-gray-300 text-sm">תשלום מיידי דרך אפליקציית קאש קאש</p>
+                </div>
+                <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                  <div className="flex items-center justify-center mb-2">
+                    <span className="text-2xl mr-2">₿</span>
+                    <h5 className="text-white font-semibold">ביט</h5>
+                  </div>
+                  <p className="text-gray-300 text-sm">העברה בנקאית מיידית (מספר שונה מהווטסאפ)</p>
+                </div>
+              </div>
+            </div>
+
             <div className="bg-yellow-900/20 border border-yellow-700 p-4 rounded-lg">
               <h4 className="text-yellow-300 font-semibold mb-2">⚠️ חשוב לדעת:</h4>
               <ul className="text-yellow-200 text-sm space-y-1 text-right">
@@ -460,6 +482,7 @@ const Index = () => {
                 <li>• ציין את שם המוצר והכמות שרכשת</li>
                 <li>• צרף את הקישור לפרופיל/שרת שלך</li>
                 <li>• זמן האספקה: 24-48 שעות לרוב השירותים</li>
+                <li>• פרטי התשלום יישלחו בווטסאפ לאחר בחירת המוצר</li>
               </ul>
             </div>
           </div>
