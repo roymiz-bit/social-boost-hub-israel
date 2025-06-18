@@ -1,18 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   const whatsappNumber = "0537771602";
-  const discordLink = "https://discord.gg/UTmEhW76qk";
 
   const handleWhatsApp = () => {
     window.open(`https://wa.me/972${whatsappNumber.substring(1)}`, '_blank');
-  };
-
-  const handleDiscord = () => {
-    window.open(discordLink, '_blank');
   };
 
   const scrollToPurchase = () => {
@@ -36,8 +30,8 @@ const Index = () => {
       {/* Contact Section */}
       <div className="bg-gray-800 py-6">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-semibold text-center mb-4 text-white">דרכי קשר לרכישה</h2>
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <h2 className="text-2xl font-semibold text-center mb-4 text-white">דרך קשר לרכישה</h2>
+          <div className="flex justify-center">
             <Button 
               onClick={handleWhatsApp}
               className="bg-gray-700 hover:bg-gray-600 text-white border border-gray-600"
@@ -45,16 +39,9 @@ const Index = () => {
             >
               📱 WhatsApp: {whatsappNumber}
             </Button>
-            <Button 
-              onClick={handleDiscord}
-              className="bg-gray-700 hover:bg-gray-600 text-white border border-gray-600"
-              size="lg"
-            >
-              💬 Discord Server
-            </Button>
           </div>
           <p className="text-center text-gray-400 mt-4">
-            לאחר רכישה, יש לפתוח טיקט בשרת Discord או לשלוח הודעה ב-WhatsApp
+            לאחר רכישה, שלח הודעה ב-WhatsApp עם פרטי המוצר שרכשת
           </p>
         </div>
       </div>
@@ -452,7 +439,7 @@ const Index = () => {
               בחרת מוצר? בוא נסיים את התהליך בקלות!
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="max-w-md mx-auto mb-6">
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-600">
                 <h4 className="text-xl font-semibold text-white mb-3">📱 WhatsApp</h4>
                 <p className="text-gray-300 mb-4">שלח הודעה עם פרטי המוצר שאתה רוצה</p>
@@ -464,24 +451,12 @@ const Index = () => {
                   פתח WhatsApp: {whatsappNumber}
                 </Button>
               </div>
-              
-              <div className="bg-gray-800 p-6 rounded-lg border border-gray-600">
-                <h4 className="text-xl font-semibold text-white mb-3">💬 Discord</h4>
-                <p className="text-gray-300 mb-4">פתח טיקט בשרת Discord שלנו</p>
-                <Button 
-                  onClick={handleDiscord}
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
-                  size="lg"
-                >
-                  הצטרף לשרת Discord
-                </Button>
-              </div>
             </div>
 
             <div className="bg-yellow-900/20 border border-yellow-700 p-4 rounded-lg">
               <h4 className="text-yellow-300 font-semibold mb-2">⚠️ חשוב לדעת:</h4>
               <ul className="text-yellow-200 text-sm space-y-1 text-right">
-                <li>• לאחר הרכישה, פתח טיקט בשרת Discord או שלח הודעה ב-WhatsApp</li>
+                <li>• לאחר הרכישה, שלח הודעה ב-WhatsApp</li>
                 <li>• ציין את שם המוצר והכמות שרכשת</li>
                 <li>• צרף את הקישור לפרופיל/שרת שלך</li>
                 <li>• זמן האספקה: 24-48 שעות לרוב השירותים</li>
