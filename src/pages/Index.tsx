@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,47 +13,114 @@ const Index = () => {
     document.getElementById('purchase-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <div className="bg-gray-900 border-b border-gray-700 py-6">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center text-white mb-2">
-            שירותי רשתות חברתיות
-          </h1>
-          <p className="text-center text-gray-300 text-lg">
-            מחירון שירותים למדיה חברתית - איכות גבוהה ומחירים הוגנים
-          </p>
-        </div>
-      </div>
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-      {/* Contact Section */}
-      <div className="bg-gray-800 py-6">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-semibold text-center mb-4 text-white">דרך קשר לרכישה</h2>
-          <div className="flex justify-center">
+  return (
+    <div className="min-h-screen bg-black text-white font-assistant">
+      {/* Sticky Navigation */}
+      <nav className="fixed top-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-b border-gray-700 z-50">
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex justify-between items-center">
+            <h1 className="text-xl font-bold text-white">שירותי רשתות חברתיות</h1>
+            <div className="flex gap-4">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={() => scrollToSection('services')}
+                className="text-gray-300 hover:text-white"
+              >
+                שירותים
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={() => scrollToSection('purchase-section')}
+                className="text-gray-300 hover:text-white"
+              >
+                רכישה
+              </Button>
+              <Button 
+                size="sm" 
+                onClick={handleWhatsApp}
+                className="bg-green-600 hover:bg-green-700"
+              >
+                WhatsApp
+              </Button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Header with padding for fixed nav */}
+      <div className="bg-gradient-to-b from-gray-900 to-gray-800 border-b border-gray-700 py-16 pt-24">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl font-bold text-white mb-4">
+            שירותי רשתות חברתיות מקצועיים
+          </h1>
+          <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+            קידום איכותי ל-TikTok, Instagram ו-Discord • איכות גבוהה • מחירים הוגנים • משלוח מהיר תוך 24-48 שעות
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={handleWhatsApp}
-              className="bg-gray-700 hover:bg-gray-600 text-white border border-gray-600"
+              onClick={() => scrollToSection('services')}
+              className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3"
               size="lg"
             >
-              📱 WhatsApp: {whatsappNumber}
+              צפה בשירותים
+            </Button>
+            <Button 
+              onClick={handleWhatsApp}
+              variant="outline"
+              className="border-gray-600 text-white hover:bg-gray-700 text-lg px-8 py-3"
+              size="lg"
+            >
+              📱 יצירת קשר מיידי
             </Button>
           </div>
-          <p className="text-center text-gray-400 mt-4">
-            לאחר רכישה, שלח הודעה ב-WhatsApp עם פרטי המוצר שרכשת
-          </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8">
+      {/* Trust Indicators */}
+      <div className="bg-gray-800 py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex items-center justify-center gap-3">
+              <span className="text-3xl">⚡</span>
+              <div>
+                <h3 className="font-semibold text-white">משלוח מהיר</h3>
+                <p className="text-gray-400 text-sm">תוך 24-48 שעות</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              <span className="text-3xl">🛡️</span>
+              <div>
+                <h3 className="font-semibold text-white">איכות מובטחת</h3>
+                <p className="text-gray-400 text-sm">אחריות מלאה</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              <span className="text-3xl">💬</span>
+              <div>
+                <h3 className="font-semibold text-white">תמיכה 24/7</h3>
+                <p className="text-gray-400 text-sm">דרך WhatsApp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="services" className="container mx-auto px-4 py-12">
+        <h2 className="text-3xl font-bold text-center mb-8 text-white">השירותים שלנו</h2>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {/* TikTok Services */}
           <Card className="bg-gray-900 border-gray-700">
             <CardHeader>
               <CardTitle className="text-white text-xl">🎵 שירותי TikTok</CardTitle>
-              <CardDescription className="text-gray-400">עוקבים, לייקים וצפיות</CardDescription>
+              <CardDescription className="text-gray-400">עוקבים, לייקים וצפיות איכותיים</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
@@ -172,7 +238,7 @@ const Index = () => {
           <Card className="bg-gray-900 border-gray-700">
             <CardHeader>
               <CardTitle className="text-white text-xl">📸 שירותי Instagram</CardTitle>
-              <CardDescription className="text-gray-400">עוקבים ולייקים</CardDescription>
+              <CardDescription className="text-gray-400">עוקבים ולייקים איכותיים</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
@@ -249,7 +315,7 @@ const Index = () => {
           <Card className="bg-gray-900 border-gray-700">
             <CardHeader>
               <CardTitle className="text-white text-xl">💎 שירותי Discord Nitro</CardTitle>
-              <CardDescription className="text-gray-400">נייטרו ובוסטים</CardDescription>
+              <CardDescription className="text-gray-400">נייטרו ובוסטים איכותיים</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
@@ -391,7 +457,7 @@ const Index = () => {
           <Card className="bg-gray-900 border-gray-700">
             <CardHeader>
               <CardTitle className="text-white text-xl">🎵 Spotify Premium</CardTitle>
-              <CardDescription className="text-gray-400">מנויים פרימיום</CardDescription>
+              <CardDescription className="text-gray-400">מנויים פרימיום איכותיים</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
@@ -432,21 +498,21 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Improved Purchase Section */}
-        <div id="purchase-section" className="mt-12 bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-lg border border-gray-700 shadow-2xl">
+        {/* Enhanced Purchase Section */}
+        <div id="purchase-section" className="mt-16 bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 shadow-2xl">
           <div className="text-center">
-            <h3 className="text-3xl font-bold mb-4 text-white">🛒 איך לרכוש?</h3>
-            <p className="text-gray-300 mb-6 text-lg">
-              בחרת מוצר? בוא נסיים את התהליך בקלות!
+            <h2 className="text-4xl font-bold mb-6 text-white">🛒 איך לרכוש?</h2>
+            <p className="text-gray-300 mb-8 text-xl max-w-2xl mx-auto">
+              בחרת מוצר? בוא נסיים את התהליך בקלות ובמהירות!
             </p>
             
-            <div className="max-w-md mx-auto mb-6">
-              <div className="bg-gray-800 p-6 rounded-lg border border-gray-600">
-                <h4 className="text-xl font-semibold text-white mb-3">📱 WhatsApp</h4>
-                <p className="text-gray-300 mb-4">שלח הודעה עם פרטי המוצר שאתה רוצה</p>
+            <div className="max-w-md mx-auto mb-8">
+              <div className="bg-gradient-to-r from-green-600 to-green-700 p-6 rounded-xl border border-green-500 shadow-lg">
+                <h3 className="text-2xl font-bold text-white mb-3">📱 WhatsApp</h3>
+                <p className="text-green-100 mb-4">שלח הודעה עם פרטי המוצר שאתה רוצה</p>
                 <Button 
                   onClick={handleWhatsApp}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  className="w-full bg-white text-green-700 hover:bg-gray-100 font-semibold"
                   size="lg"
                 >
                   פתח WhatsApp: {whatsappNumber}
@@ -455,39 +521,71 @@ const Index = () => {
             </div>
 
             {/* Payment Methods Section */}
-            <div className="bg-blue-900/20 border border-blue-700 p-6 rounded-lg mb-6">
-              <h4 className="text-blue-300 font-semibold mb-4 text-xl">💳 דרכי תשלום</h4>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
-                  <div className="flex items-center justify-center mb-2">
-                    <span className="text-2xl mr-2">💵</span>
-                    <h5 className="text-white font-semibold">קאש קאש</h5>
+            <div className="bg-blue-900/30 border border-blue-600 p-6 rounded-xl mb-8">
+              <h3 className="text-blue-300 font-bold mb-6 text-2xl">💳 דרכי תשלום</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gray-800 p-6 rounded-xl border border-gray-600 hover:border-gray-500 transition-colors">
+                  <div className="flex items-center justify-center mb-3">
+                    <span className="text-3xl mr-3">💵</span>
+                    <h4 className="text-white font-bold text-lg">קאש קאש</h4>
                   </div>
-                  <p className="text-gray-300 text-sm">תשלום מיידי דרך אפליקציית קאש קאש</p>
+                  <p className="text-gray-300">תשלום מיידי דרך אפליקציית קאש קאש</p>
                 </div>
-                <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
-                  <div className="flex items-center justify-center mb-2">
-                    <span className="text-2xl mr-2">₿</span>
-                    <h5 className="text-white font-semibold">ביט</h5>
+                <div className="bg-gray-800 p-6 rounded-xl border border-gray-600 hover:border-gray-500 transition-colors">
+                  <div className="flex items-center justify-center mb-3">
+                    <span className="text-3xl mr-3">₿</span>
+                    <h4 className="text-white font-bold text-lg">ביט</h4>
                   </div>
-                  <p className="text-gray-300 text-sm">העברה בנקאית מיידית (מספר שונה מהווטסאפ)</p>
+                  <p className="text-gray-300">העברה בנקאית מיידית<br/>(מספר שונה מהווטסאפ)</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-yellow-900/20 border border-yellow-700 p-4 rounded-lg">
-              <h4 className="text-yellow-300 font-semibold mb-2">⚠️ חשוב לדעת:</h4>
-              <ul className="text-yellow-200 text-sm space-y-1 text-right">
-                <li>• לאחר הרכישה, שלח הודעה ב-WhatsApp</li>
-                <li>• ציין את שם המוצר והכמות שרכשת</li>
-                <li>• צרף את הקישור לפרופיל/שרת שלך</li>
-                <li>• זמן האספקה: 24-48 שעות לרוב השירותים</li>
-                <li>• פרטי התשלום יישלחו בווטסאפ לאחר בחירת המוצר</li>
+            <div className="bg-yellow-900/30 border border-yellow-600 p-6 rounded-xl">
+              <h3 className="text-yellow-300 font-bold mb-4 text-xl">⚠️ חשוב לדעת:</h3>
+              <ul className="text-yellow-200 space-y-2 text-right max-w-lg mx-auto">
+                <li className="flex items-center justify-end gap-2">
+                  <span>לאחר הרכישה, שלח הודעה ב-WhatsApp</span>
+                  <span>•</span>
+                </li>
+                <li className="flex items-center justify-end gap-2">
+                  <span>ציין את שם המוצר והכמות שרכשת</span>
+                  <span>•</span>
+                </li>
+                <li className="flex items-center justify-end gap-2">
+                  <span>צרף את הקישור לפרופיל/שרת שלך</span>
+                  <span>•</span>
+                </li>
+                <li className="flex items-center justify-end gap-2">
+                  <span>זמן האספקה: 24-48 שעות לרוב השירותים</span>
+                  <span>•</span>
+                </li>
+                <li className="flex items-center justify-end gap-2">
+                  <span>פרטי התשלום יישלחו בווטסאפ לאחר בחירת המוצר</span>
+                  <span>•</span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 border-t border-gray-700 py-8 mt-16">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-xl font-bold text-white mb-3">שירותי רשתות חברתיות</h3>
+          <p className="text-gray-400 mb-4">השירות המוביל לקידום ברשתות חברתיות בישראל</p>
+          <Button 
+            onClick={handleWhatsApp}
+            className="bg-green-600 hover:bg-green-700"
+          >
+            📱 WhatsApp: {whatsappNumber}
+          </Button>
+          <p className="text-gray-500 text-sm mt-6">
+            © 2024 שירותי רשתות חברתיות. כל הזכויות שמורות.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
